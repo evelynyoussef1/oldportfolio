@@ -1,0 +1,268 @@
+* {
+    font-family: 'Montserrat', sans-serif, 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* NAVBAR CSS */
+nav{
+    padding-left:4em;
+    padding-right: 4em;
+    /* TODO: figure out no longer staying fixed */
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+
+    z-index: 10;
+  }
+
+  nav ul {
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  nav li{
+    padding: 1em 0;
+    list-style-type: none;
+    padding: 25px;
+    font-size: 1.7em;
+  }
+  
+  nav li a {
+    color:rgb(29, 0, 0);
+    font-family: 'Oswald';
+    font-weight: 500;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  nav li a:hover {
+    color: rgba(88, 179, 88, 0.801);
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  /* HEADER CSS */
+.header {
+    position: relative;
+    background-image: url(images/_DSC0094.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: rgb(184, 78, 78);
+}
+
+
+.welcome{
+  font-family: 'Oswald';
+    margin-top: 25vh;
+    text-align: center;
+    font-weight: 400;
+    font-size:2em;
+    color: white}
+
+#changingword {
+    color: rgba(88, 179, 88, 0.801);
+    font-family: 'Oswald';
+    font-weight: 500;
+      } 
+
+/* IMAGE GALLERY CSS */
+.image-gallery {
+  background-color: rgba(151, 226, 133, 0.801);
+  background-position: center center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding-top: 200px;
+    grid-template-areas:
+    ". a b c ."
+    ". d e f ."
+    ;
+}
+
+.box-styling {
+    height: 350px;
+    background-color: black;
+    clip-path: polygon(85% 0, 90% 10%, 100% 5%, 90% 50%, 100% 95%, 90% 90%, 85% 100%, 50% 95%, 15% 100%, 10% 90%, 0 95%, 10% 50%, 0 5%, 10% 10%, 15% 0, 50% 5%);
+}
+
+.box1 {
+    grid-area: a;
+    clip-path: polygon(64% 6%, 84% 1%, 84% 22%, 100% 28%, 85% 52%, 100% 76%, 89% 100%, 69% 90%, 50% 100%, 19% 90%, 0 100%, 0 70%, 9% 38%, 0 0, 12% 9%, 35% 17%);
+    }
+
+.box2 {
+    grid-area: b;
+    clip-path: polygon(64% 9%, 84% 1%, 84% 22%, 100% 28%, 85% 52%, 100% 76%, 89% 100%, 69% 90%, 47% 100%, 19% 90%, 0 100%, 10% 43%, 0 23%, 13% 16%, 12% 0, 37% 5%);
+}
+
+.box3 {
+    grid-area: c;
+    clip-path: polygon(85% 0, 90% 10%, 100% 5%, 90% 50%, 100% 95%, 90% 90%, 85% 100%, 68% 71%, 15% 100%, 10% 90%, 0 95%, 10% 50%, 0 5%, 10% 10%, 15% 0, 34% 20%);
+}
+
+.box4 {
+    grid-area: d;
+    clip-path: polygon(64% 14%, 84% 1%, 98% 15%, 88% 34%, 100% 60%, 95% 80%, 77% 96%, 60% 86%, 39% 85%, 18% 94%, 19% 73%, 0 70%, 9% 40%, 0 0, 19% 6%, 41% 6%);}
+
+.box5 {
+    grid-area: e;
+    clip-path: polygon(57% 20%, 76% 0, 89% 15%, 100% 50%, 87% 63%, 100% 100%, 80% 71%, 72% 100%, 46% 69%, 20% 100%, 19% 73%, 0 70%, 19% 41%, 0 0, 17% 15%, 40% 0);
+}
+
+.box6 {
+    grid-area: f;
+    clip-path: polygon(64% 14%, 84% 1%, 100% 14%, 95% 28%, 100% 60%, 88% 77%, 89% 100%, 56% 90%, 31% 90%, 8% 100%, 12% 79%, 0 70%, 6% 42%, 0 0, 12% 9%, 41% 6%);
+    }
+
+.bigText {
+    font-size: 2em;
+    padding-right: .5ch;
+    font-family: 'Oswald';
+    font-weight: 400;
+}
+
+
+/* ABOUT ME CSS*/
+.about-me {
+    height: 100vh !important;
+    background-color:rgba(88, 179, 88, 0.801) !important;
+    padding: 20vh 50px 50px 50px;
+    column-count: 1;
+    line-height: 1.5em;
+}
+
+/* CONTACT CSS */
+.contact {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 25vh !important;
+    padding-bottom: 70vh;
+    background-color: rgba(82, 152, 84, 0.801)!important;
+    grid-template-columns: 3fr minmax(2fr, 1fr) minmax(2fr, 1fr) 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". title title ."
+    ". logo wrapper ."
+    ;
+}
+
+.contact-title {
+    font-size: 2em;
+    grid-area: title;
+    
+}
+
+.logo-svg {
+    width: 400px;
+    grid-area: logo;
+}
+
+.contact-wrapper {
+    grid-area: wrapper;
+}
+
+
+   /* footer section */
+   .filter-green{
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+   footer{
+    background-color:rgba(88, 179, 88, 0.801);
+    grid-area:footer;
+  }
+  footer p{
+    font-size:2em;
+  }
+  footer li {
+    display:inline;
+  }
+  footer ul {
+    max-width: 640px;
+    margin: 2em auto;
+    padding:0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li{
+    list-style: none;
+    align-self:flex-end;
+  }
+  footer ul li a {
+    text-decoration:none;
+    color: black;
+    opacity:.6;
+    transition: .3s;
+  }
+  footer ul li a:hover {
+    text-decoration:none;
+    color: black;
+  }
+  footer svg {
+    width:20%;
+  }
+  footer p{
+    font-size: 1em;
+  }
+
+
+
+  /* MEDIA QUERY FOR SMALL SCREENS */
+ @media (max-width:1100px){
+    .image-gallery {
+        margin-bottom: 800px;
+        grid-template-columns: 1fr minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+        grid-template-areas:
+        ". a b ."
+        ". c d ."
+        ". e f ."
+        ;
+    }
+ }
+
+/* MEDIA QUERY FOR MOBILE */
+ @media (max-width:735px){
+     nav {
+         padding-left: 0;
+     }
+
+    .image-gallery {
+        padding-bottom: 200%;
+        grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+        grid-template-areas:
+        ".a."
+        ".b."
+        ".c."
+        ".d."
+        ".e."
+        ".f."
+        ;
+    }
+
+    .contact {
+        padding-bottom: 200%;
+        grid-template-columns: 3fr minmax(2fr, 1fr) 3fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". title ."
+        ". logo ."
+        ". wrapper ."
+        ;
+    }
+    
+ }
