@@ -1,0 +1,167 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    background-color: rgba(218, 227, 255, 0.699);
+    padding: 2%;
+    margin-left: 10%;
+    margin-right:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 30px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "h h h h h h h h h o o o"
+        "w w w w w w w w w b b b"
+        "e e e e e e e e e p p p"
+        "s s s s s s s s s c c c"
+        "f f f f f f f f f f f f";
+}
+
+li{
+    font-weight: 400;
+    padding:10px;
+}
+.header{
+    font-weight: 300;
+}
+.where{
+    font: weight 500;
+}
+
+.job{
+    font-weight: 300;
+}
+
+body{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    background-image:'patternBC.png';
+    background-attachment: fixed;
+}
+
+ul{
+    list-style: none;
+    padding-bottom: 25px;;
+}
+
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    padding-top:25px;
+    font-size: 1.5em;
+}
+
+h3{
+    padding-top:45px;
+}
+
+body{
+    background-image: url(patternBC.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+    
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "h"
+        "o"
+        "b"
+        "w"
+        "e"
+        "s"
+        "p"
+        "c"
+        "f";
+        padding: 10px;
+        text-align: left;
+        margin-right: 10%;
+        
+    }
+}
+
+
+/* step 1 - assign each of your sections a letter */
+
+.box{
+ height: fit-content;
+}
+blockquote {
+    grid-area: q;
+    font-weight:300;
+    padding-bottom:30px;
+}
+
+header {
+    grid-area: h;
+    padding-top: 4px;
+}
+.photo {
+    grid-area:o;
+}
+.workexperience {
+    grid-area: w;
+    border-bottom: 5px solid #6565ba;
+}
+
+.education {
+    grid-area: e;
+    border-bottom: 5px solid #6565ba;
+}
+
+.skills {
+    grid-area: s;
+}
+
+.biography {
+    grid-area: b;
+
+}
+
+.interests {
+    grid-area: p;
+   
+}
+
+.contact {
+    grid-area: c;
+}
+
+footer{
+    grid-area: f;
+}

@@ -4,7 +4,12 @@
     padding: 0;
    
 }
-
+/* /* body{
+  /* background-color: green; */
+/* } */  
+body{
+  background-color: rgb(236, 87, 0);
+}
 
 img {
     width: 100%;
@@ -80,12 +85,12 @@ nav{
 /* IMAGE GALLERY CSS */
 .image-gallery {
   background-color: rgba(151, 226, 133, 0.801);
-  background-position: center center;
-    height: 100%;
+  background-position: top center;
+    /* height: 100%; */
     display: grid;
     grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
     grid-template-rows: auto;
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
     padding-top: 200px;
     grid-template-areas:
     ". a b c ."
@@ -139,10 +144,15 @@ nav{
 /* ABOUT ME CSS*/
 .about-me {
     height: 100vh !important;
-    background-color:rgba(88, 179, 88, 0.801) !important;
+    /* background-color:rgba(88, 179, 88, 0.801) !important; */
+    background-image: url(images/backgroundImage.jpg);
+    background-position: center;
+    background-size: 45%;
+    /* opacity: 0.5; */
     padding: 20vh 50px 50px 50px;
     column-count: 1;
     line-height: 1.5em;
+    
 }
 
 /* CONTACT CSS */
@@ -151,8 +161,8 @@ nav{
     justify-items: center;
     align-items: center;
     height: 25vh !important;
-    padding-bottom: 70vh;
-    background-color: rgba(82, 152, 84, 0.801)!important;
+    padding-bottom: 50vh;
+    background-color: rgba(151, 226, 133, 0.801)!important;
     grid-template-columns: 3fr minmax(2fr, 1fr) minmax(2fr, 1fr) 3fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -162,13 +172,13 @@ nav{
 }
 
 .contact-title {
+    font-family:'Oswald';
     font-size: 2em;
     grid-area: title;
-    
 }
 
 .logo-svg {
-    width: 400px;
+    width: 300px;
     grid-area: logo;
 }
 
@@ -179,14 +189,15 @@ nav{
 
    /* footer section */
    .filter-green{
-    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    filter: invert(25%) sepia(79%) saturate(2423%) hue-rotate(86deg) brightness(168%) contrast(119%);
+    
 }
    footer{
-    background-color:rgba(88, 179, 88, 0.801);
+    /* background-color:rgba(88, 179, 88, 0.801); */
     grid-area:footer;
   }
   footer p{
-    font-size:2em;
+    font: size 2em;
   }
   footer li {
     display:inline;
@@ -214,10 +225,11 @@ nav{
     color: black;
   }
   footer svg {
-    width:20%;
+    width:55%;
   }
   footer p{
     font-size: 1em;
+    font-family: 'Oswald';
   }
 
 
@@ -242,7 +254,7 @@ nav{
      }
 
     .image-gallery {
-        padding-bottom: 200%;
+        padding-bottom: 150%;
         grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
         grid-template-areas:
         ".a."
@@ -255,7 +267,7 @@ nav{
     }
 
     .contact {
-        padding-bottom: 200%;
+        padding-bottom: 100%;
         grid-template-columns: 3fr minmax(2fr, 1fr) 3fr;
         grid-template-rows: auto;
         grid-template-areas:
